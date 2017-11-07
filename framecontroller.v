@@ -311,6 +311,8 @@ module FrameMakerSM
 					BS_onoff = 0;			
 				ready_st:
 					frameReady = 1;
+				error_st:
+					invalidBit = 1;
 			endcase
 	end
 
