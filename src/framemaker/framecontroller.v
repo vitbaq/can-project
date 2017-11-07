@@ -4,15 +4,15 @@
 module FrameMakerSM
 (
 	input	sp, CAN_RX, reset, isStuff, errorFlag,
-	output BSonoff, readCRC, typeCRC, valueCRC,
-	BRS_Stop, invalidBit, ackValue, RTR_SRR, IDE,
-	EDL, BRS, RTR_r1, bitLido, inc, frameReady
+	output BSonoff, CRCtype, BRS_Stop, invalidBit, 
+	ackValue, RTR_SRR, IDE,	EDL, BRS, RTR_r1, frameReady
 );
 
 	// Declare state register
 	reg		[4:0]state;
 	reg		[7:0]cont;
 	reg		[3:0]dlc;
+	reg		[1:0]crc;
 	reg		FD;
 
 	// Declare states
@@ -31,12 +31,25 @@ module FrameMakerSM
 			cont = 0;
 			dlc = 0;
 			FD = 0;
+			crc = 0;
+			//Sinais de saida reiniciados
+			BSonoff = 0;
+			CRCtype = 0;
+			BRS_Stop = 0;
+			invalidBit = 0;
+			ackValue = 0;
+			RTR_SRR = 0;
+			IDE = 0;
+			EDL = 0;
+			BRS = 0;
+			RTR_r1 = 0;
+			frameReady = 0;
 		end
 		else
 			if(~isStuff)
 			begin
-				#1 inc = 1; // Incremento em forma de clock
-				#1 inc = 0; // A gente pode usar a expressao (sp ^ ~isStuff) para criar um incremento em qualquer bloco
+				//#1 inc = 1; // Incremento em forma de clock
+				//#1 inc = 0; // A gente pode usar a expressao (sp ^ ~isStuff) para criar um incremento em qualquer bloco
 				case (state)
 					arbID_st: // ID 
 						if(cont < 10)
@@ -245,6 +258,26 @@ module FrameMakerSM
 						end
 					ready_st:
 						frameReady = 1;
+					error_st:
+						begin
+							state <= arbID_st;
+							cont = 0;
+							dlc = 0;
+							FD = 0;
+							crc = 0;
+							//Sinais de saida reiniciados
+							BSonoff = 0;
+							CRCtype = 0;
+							BRS_Stop = 0;
+							invalidBit = 0;
+							ackValue = 0;
+							RTR_SRR = 0;
+							IDE = 0;
+							EDL = 0;
+							BRS = 0;
+							RTR_r1 = 0;
+							frameReady = 0;
+						end
 				endcase
 			end
 	end
@@ -273,7 +306,10 @@ module FrameMakerSM
 				//r0_FD_st:
 					
 				BRS_st:
+					begin
 					BRS = CAN_RX;
+					BRS_Stop = CAN_RX; // Sample Point FD pode ser ativado aqui
+					end
 				//ESI_st:
 					
 				//DLC_st:
@@ -286,20 +322,21 @@ module FrameMakerSM
 				crc15_st:
 					begin
 					CRCtype = 1;
-					CRCValue = CAN_RX;
 					end
 				crc17_st:
 					begin
 					CRCtype = 2;
-					CRCValue = CAN_RX;
 					end
 				crc21_st:
 					begin
 					CRCtype = 3;
-					CRCValue = CAN_RX;
 					end
 				crcDel_st:
+					begin
+					CRCtype = 0;
 					BS_onoff = 0;
+					BRS_Stop = 0; // Sample Point volta ao normal
+					end
 				ack_st:
 					begin
 						ackValue = CAN_RX;
