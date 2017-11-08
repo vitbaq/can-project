@@ -4,7 +4,7 @@
 module FrameMakerSM
 (
 	input	sp, CAN_RX, reset, isStuff, errorFlag,
-	output BSonoff, CRCtype, BRS_Stop, invalidBit, 
+	output BSonoff, CRCtype, BRS_Stop, invalidBit, CRCcalc_on, CRCtime, 
 	ackValue, RTR_SRR, IDE,	EDL, BRS, RTR_r1, frameReady
 );
 
@@ -25,7 +25,7 @@ module FrameMakerSM
 	// Determine the next state synchronously, based on the
 	// current state and the input
 	always @ (posedge sp or posedge reset) begin
-		if (reset)
+		if (reset || errorFlag)
 		begin
 			state <= arbID_st;
 			cont = 0;
@@ -35,6 +35,8 @@ module FrameMakerSM
 			//Sinais de saida reiniciados
 			BSonoff = 0;
 			CRCtype = 0;
+			CRCtime = 0;
+			CRCcalc_on = 0;
 			BRS_Stop = 0;
 			invalidBit = 0;
 			ackValue = 0;
@@ -45,6 +47,10 @@ module FrameMakerSM
 			RTR_r1 = 0;
 			frameReady = 0;
 		end
+		else if(errorFlag)
+			begin
+			state <= error_st;
+			end
 		else
 			if(~isStuff)
 			begin
@@ -288,7 +294,10 @@ module FrameMakerSM
 	begin
 			case (state)
 				arbID_st:
+				begin
 					BS_onoff = 1;
+					CRCcalc_on = 1;
+				end
 				RTR_SRR_st:
 					RTR_SRR = CAN_RX;
 				IDE0_st:
@@ -321,18 +330,25 @@ module FrameMakerSM
 					end			
 				crc15_st:
 					begin
+					CRCcalc_on =0;
+					CRCtime = 1
 					CRCtype = 1;
 					end
 				crc17_st:
 					begin
+					CRCcalc_on =0;
+					CRCtime = 1
 					CRCtype = 2;
 					end
 				crc21_st:
 					begin
+					CRCcalc_on =0;
+					CRCtime = 1
 					CRCtype = 3;
 					end
 				crcDel_st:
 					begin
+					CRCtime = 0;
 					CRCtype = 0;
 					BS_onoff = 0;
 					BRS_Stop = 0; // Sample Point volta ao normal
