@@ -19,6 +19,8 @@ module error(reset, samplePoint, eofErro, crcErro, stuffErro, overloadFlag, outp
 		if(reset)
 			begin
 			  stateRead <= state;
+			  crcErro <= 1'b1;
+			  counter <= counter + 1;
 			end
 		
 		else
@@ -53,18 +55,18 @@ module error(reset, samplePoint, eofErro, crcErro, stuffErro, overloadFlag, outp
 								begin 
 									if (count == 4) 
 										begin
-											count <= count + 1;
+											counter <= counter + 1;
 										end 
 									else 
 										begin
-											count <= count + 1;
+											counter <= counter + 1;
 										end
 								end 
 
 							else 
 								if (canRX == 1) 
 									begin
-										count <= 0;
+										counter <= 0;
 										state <= overloadFlag;
 									end
 					endcase
