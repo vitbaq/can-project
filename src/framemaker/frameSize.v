@@ -4,31 +4,31 @@ module frameSize
 	output reg [9:0] size
 );
 
-	reg		[9:0] sizeValue;
+	//reg		[9:0] sizeValue;
 	
 	initial begin
-		sizeValue = 0;
+		size <= 0;
 	end
-
+	
 	// Determine the next state synchronously, based on the
 	// current state and the input
 	always @ (posedge sp or posedge reset) begin
 		if (reset)
 			begin
-				sizeValue = 0;
+				size <= 10'b0;
 			end
 		else if (~isStuff)
 			begin
-				sizeValue = sizeValue + 1;
+				size <= size + 1;
 			end
 	end
 
 	
 	// Determine the output based only on the current state
 	// and the input (do not wait for a clock edge).
-	always @ (state or in)
+	/*always @ (sp)
 	begin
 			size = sizeValue;
-	end
+	end*/
  
 endmodule
