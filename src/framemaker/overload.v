@@ -9,6 +9,7 @@ module overload (samplePoint, canRX, isOverload, isError, endOverload);
 	reg [1:0]state = overload_flag;
 	reg [4:0]count = 0;
 	reg endOverload0 = 0;
+	reg alredyOverError = 0;
 	
 	assign endOverload = endOverload0;
 	
@@ -18,31 +19,35 @@ module overload (samplePoint, canRX, isOverload, isError, endOverload);
 			endOverload0 <= 0;
 		end
 
-		if (isOverload == 1 || isError == 1) begin
-		
+		if (isOverload == 1 || isError == 1 || alredyOverError == 1) begin
+			
 			case (state)
 				overload_flag: //seis bit, porem um ja foi contado no bloco interframe space para um frame overload
-					if (isOverload) begin
+					if (isOverload == 1 || alredyOverError == 1) begin
 						if (canRX == 0) begin 
 							if (count == 4) begin
 								state <= overload_superposition;
 								count <= count + 1;
 							end else begin
+								alredyOverError <= 1;
 								count <= count + 1;
 							end
 						end else if (canRX == 1) begin
+							alredyOverError <= 1;
 							count <= 0;
 							state <= overload_flag;
 						end
-					end else if (isError) begin
+					end else if (isError == 1 || alredyOverError == 1) begin
 						if (canRX == 0) begin 
 							if (count == 5) begin
 								state <= overload_superposition;
 								count <= count + 1;
 							end else begin
+								alredyOverError <= 1;
 								count <= count + 1;
 							end
 						end else if (canRX == 1) begin
+							alredyOverError <= 1;
 							count <= 0;
 							state <= overload_flag;
 						end
@@ -66,6 +71,7 @@ module overload (samplePoint, canRX, isOverload, isError, endOverload);
 							count <= count + 1;
 						end else begin
 							endOverload0 <= 1;
+							alredyOverError <= 0;
 							state <= overload_flag;
 							count <= 0;
 						end
