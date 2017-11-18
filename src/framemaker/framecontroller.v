@@ -1,79 +1,78 @@
 // Modulo da maquina de estados do Frame controller
 // Redes Automotivas - CIn UFPE - 2017.2
 //
-module FrameMakerSM
+module framecontroller
 (
 	input	sp, CAN_RX, reset, isStuff, errorFlag,
-	output BSonoff, CRCtype, BRS_Stop, invalidBit, CRCcalc_on, CRCtime, 
-	ackValue, RTR_SRR, IDE,	EDL, BRS, RTR_r1, frameReady
+	output reg BS_onoff,
+	output reg CRCtype,
+	output reg BRS_Stop,
+	output reg invalidBit,
+	output reg  CRCcalc_on,
+	output reg  CRCtime, 
+	output reg ackValue,
+	output reg  RTR_SRR,
+	output reg  IDE,
+	output reg 	EDL,
+	output reg  BRS,
+	output reg RTR_r1,
+	output reg frameReady
 );
 
 	// Declare state register
 	reg		[4:0]state;
 	reg		[7:0]cont;
 	reg		[3:0]dlc;
-	reg		[1:0]crc;
 	reg		FD;
+	reg		bitlido;
 
 	// Declare states
 	parameter arbID_st = 0, RTR_SRR_st = 1, IDE0_st = 2, IDE1_st = 3, r0_EDL_st = 4;
 	parameter extID_st = 5, extRTR_st = 6, r1_EDL_st = 7, r0_FD_st = 8, BRS_st = 9;
 	parameter ESI_st = 10, DLC_st = 11, data_st = 12, crc15_st = 13, crc17_st = 14;
-	parameter crc21_st = 15, crcDel_st = 16, ack_st = 17, ackdel_st = 18, eof_st = 19;
+	parameter crc21_st = 15, crcDel_st = 16, ack_st = 17, ackDel_st = 18, eof_st = 19;
 	parameter ready_st = 20, error_st = 21;
 
 	// Determine the next state synchronously, based on the
 	// current state and the input
 	always @ (posedge sp or posedge reset) begin
-		if (reset || errorFlag)
+		if (reset)
 		begin
 			state <= arbID_st;
 			cont = 0;
 			dlc = 0;
 			FD = 0;
-			crc = 0;
-			//Sinais de saida reiniciados
-			BSonoff = 0;
-			CRCtype = 0;
-			CRCtime = 0;
-			CRCcalc_on = 0;
-			BRS_Stop = 0;
-			invalidBit = 0;
-			ackValue = 0;
-			RTR_SRR = 0;
-			IDE = 0;
-			EDL = 0;
-			BRS = 0;
-			RTR_r1 = 0;
-			frameReady = 0;
-		end
-		else if(errorFlag)
+			if(errorFlag)
 			begin
-			state <= error_st;
+				state <= error_st;
 			end
+		end
 		else
 			if(~isStuff)
 			begin
-				//#1 inc = 1; // Incremento em forma de clock
-				//#1 inc = 0; // A gente pode usar a expressao (sp ^ ~isStuff) para criar um incremento em qualquer bloco
 				case (state)
-					arbID_st: // ID 
-						if(cont < 10)
+					arbID_st: // ID
 						begin
-							cont = cont +1;
-						end
-						else
-						begin
-							state <= RTR_SRR_st;
+							bitlido = CAN_RX;
+							if(cont < 10)
+							begin
+								cont = cont +1;
+							end
+							else
+							begin
+								state <= RTR_SRR_st;
+							end
 						end
 					RTR_SRR_st: // RTR_SRR
-						if (CAN_RX)
 						begin
-							state <= IDE1_st;
-						end
-						else
-						begin
-							state <= IDE0_st;
+							if (CAN_RX)
+							begin
+								state <= IDE1_st;
+							end
+							else
+							begin
+								state <= IDE0_st;
+							end
 						end
 					IDE0_st:
 						if(~CAN_RX)
@@ -92,7 +91,6 @@ module FrameMakerSM
 						end
 						else
 						begin
-							RTR = 1;
 							state <= r0_EDL_st;
 						end
 					extID_st:
@@ -106,7 +104,6 @@ module FrameMakerSM
 						end
 					extRTR_st:
 						begin
-							RTR = CAN_RX;
 							state <= r1_EDL_st;
 						end
 					r1_EDL_st:
@@ -150,7 +147,7 @@ module FrameMakerSM
 							dlc = dlc << 1;
 							dlc = dlc + CAN_RX;
 							cont = cont + 1;
-							if (cont == 4  && dlc != 0) 
+							if (cont == 3  && dlc != 0) 
 							begin
 								cont = 0;
 								if(dlc > 8)
@@ -174,13 +171,14 @@ module FrameMakerSM
 								end
 								state <= data_st;
 							end
-							else if(cont == 4 && dlc == 0)
+							else if(cont == 3 && dlc == 0)
 							begin
+								cont =0;
 								if(FD == 0)
 								begin
 									state <= crc15_st;
 								end
-								else if(DLC <= 16)
+								else if(dlc <= 16)
 								begin
 									state <= crc17_st;
 								end
@@ -197,14 +195,17 @@ module FrameMakerSM
 							begin
 								if(FD == 0)
 								begin
+									cont = 0;
 									state <= crc15_st;
 								end
-								else if(DLC <= 16)
+								else if(dlc <= 16)
 								begin
+									cont = 0;
 									state <= crc17_st;
 								end
 								else
 								begin
+									cont = 0;
 									state <= crc21_st;
 								end
 							end
@@ -263,26 +264,12 @@ module FrameMakerSM
 							end
 						end
 					ready_st:
-						frameReady = 1;
+						state <= ready_st;
 					error_st:
 						begin
-							state <= arbID_st;
 							cont = 0;
 							dlc = 0;
 							FD = 0;
-							crc = 0;
-							//Sinais de saida reiniciados
-							BSonoff = 0;
-							CRCtype = 0;
-							BRS_Stop = 0;
-							invalidBit = 0;
-							ackValue = 0;
-							RTR_SRR = 0;
-							IDE = 0;
-							EDL = 0;
-							BRS = 0;
-							RTR_r1 = 0;
-							frameReady = 0;
 						end
 				endcase
 			end
@@ -290,11 +277,24 @@ module FrameMakerSM
 
 	// Determine the output based only on the current state
 	// and the input (do not wait for a clock edge).
-	always @ (state or in)
+	always @ (state)
 	begin
 			case (state)
 				arbID_st:
 				begin
+					BS_onoff = 0;
+					CRCtype = 0;
+					CRCtime = 0;
+					CRCcalc_on = 0;
+					BRS_Stop = 0;
+					invalidBit = 0;
+					ackValue = 0;
+					RTR_SRR = 0;
+					IDE = 0;
+					EDL = 0;
+					BRS = 0;
+					RTR_r1 = 0;
+					frameReady = 0;
 					BS_onoff = 1;
 					CRCcalc_on = 1;
 				end
@@ -331,19 +331,19 @@ module FrameMakerSM
 				crc15_st:
 					begin
 					CRCcalc_on =0;
-					CRCtime = 1
+					CRCtime = 1;
 					CRCtype = 1;
 					end
 				crc17_st:
 					begin
 					CRCcalc_on =0;
-					CRCtime = 1
+					CRCtime = 1;
 					CRCtype = 2;
 					end
 				crc21_st:
 					begin
 					CRCcalc_on =0;
-					CRCtime = 1
+					CRCtime = 1;
 					CRCtype = 3;
 					end
 				crcDel_st:
@@ -365,7 +365,20 @@ module FrameMakerSM
 				ready_st:
 					frameReady = 1;
 				error_st:
+				begin
+					BS_onoff = 0;
+					CRCtype = 0;
+					BRS_Stop = 0;
+					invalidBit = 0;
+					ackValue = 0;
+					RTR_SRR = 0;
+					IDE = 0;
+					EDL = 0;
+					BRS = 0;
+					RTR_r1 = 0;
+					frameReady = 0;
 					invalidBit = 1;
+				end
 			endcase
 	end
 
