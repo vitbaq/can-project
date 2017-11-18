@@ -42,6 +42,22 @@ module framecontroller
 			cont = 0;
 			dlc = 0;
 			FD = 0;
+			//Saidas
+			BS_onoff = 0;
+			CRCtype = 0;
+			CRCtime = 0;
+			CRCcalc_on = 0;
+			BRS_Stop = 0;
+			invalidBit = 0;
+			ackValue = 0;
+			RTR_SRR = 0;
+			IDE = 0;
+			EDL = 0;
+			BRS = 0;
+			RTR_r1 = 0;
+			frameReady = 0;
+			BS_onoff = 1;
+			CRCcalc_on = 1;
 			if(errorFlag)
 			begin
 				state <= error_st;
@@ -53,7 +69,6 @@ module framecontroller
 				case (state)
 					arbID_st: // ID
 						begin
-							bitlido = CAN_RX;
 							if(cont < 10)
 							begin
 								cont = cont +1;
@@ -65,6 +80,7 @@ module framecontroller
 						end
 					RTR_SRR_st: // RTR_SRR
 						begin
+							RTR_SRR = CAN_RX;
 							if (CAN_RX)
 							begin
 								state <= IDE1_st;
@@ -75,23 +91,29 @@ module framecontroller
 							end
 						end
 					IDE0_st:
+						begin
+						IDE = CAN_RX;
 						if(~CAN_RX)
-						begin
-						state <= r0_EDL_st;
-						end
+							begin
+								state <= r0_EDL_st;
+							end
 						else
-						begin
-						state <= error_st;
+							begin
+								state <= error_st;
+							end
 						end
 					IDE1_st:
+						begin
+						IDE = CAN_RX;
 						if (CAN_RX)
-						begin
-							cont = 0;
-							state <= extID_st;
-						end
-						else
-						begin
-							state <= r0_EDL_st;
+							begin
+								cont = 0;
+								state <= extID_st;
+							end
+							else
+							begin
+								state <= r0_EDL_st;
+							end
 						end
 					extID_st:
 						if (cont < 17)
@@ -104,26 +126,33 @@ module framecontroller
 						end
 					extRTR_st:
 						begin
+							RTR_r1 = CAN_RX;
 							state <= r1_EDL_st;
 						end
 					r1_EDL_st:
-						if (CAN_RX)
 						begin
-							state <= r0_FD_st;
-						end
-						else
-						begin
-							state <= r0_EDL_st;
+							EDL = CAN_RX;
+							if (CAN_RX)
+							begin
+								state <= r0_FD_st;
+							end
+							else
+							begin
+								state <= r0_EDL_st;
+							end
 						end
 					r0_EDL_st:
-						if (CAN_RX)
 						begin
-							state <= r0_FD_st;
-						end
-						else
-						begin
-							cont = 0;
-							state <= DLC_st;
+							EDL = CAN_RX;
+							if (CAN_RX)
+							begin
+								state <= r0_FD_st;
+							end
+							else
+							begin
+								cont = 0;
+								state <= DLC_st;
+							end
 						end
 					r0_FD_st:
 						if(~CAN_RX)
@@ -136,7 +165,11 @@ module framecontroller
 							state <= error_st;
 						end
 					BRS_st:
-						state <= ESI_st;
+						begin
+							BRS = CAN_RX;
+							BRS_Stop = CAN_RX;
+							state <= ESI_st;
+						end
 					ESI_st:
 						begin
 							cont = 0;
@@ -147,7 +180,8 @@ module framecontroller
 							dlc = dlc << 1;
 							dlc = dlc + CAN_RX;
 							cont = cont + 1;
-							if (cont == 3  && dlc != 0) 
+							bitlido = CAN_RX;
+							if (cont == 4  && dlc != 0) 
 							begin
 								cont = 0;
 								if(dlc > 8)
@@ -171,7 +205,7 @@ module framecontroller
 								end
 								state <= data_st;
 							end
-							else if(cont == 3 && dlc == 0)
+							else if(cont == 4 && dlc == 0)
 							begin
 								cont =0;
 								if(FD == 0)
@@ -190,6 +224,10 @@ module framecontroller
 						end
 					data_st:
 						begin
+							if(FD)
+								begin
+									BRS_Stop = 1;
+								end
 							cont = cont + 1;
 							if (cont==8*dlc) //Definir DLC em algum lugar
 							begin
@@ -212,6 +250,9 @@ module framecontroller
 						end
 					crc15_st:
 						begin
+							CRCcalc_on =0;
+							CRCtime = 1;
+							CRCtype = 1;
 							cont = cont +1;
 							if (cont==15)
 							begin
@@ -220,6 +261,9 @@ module framecontroller
 						end
 					crc17_st:
 						begin
+							CRCcalc_on =0;
+							CRCtime = 1;
+							CRCtype = 2;
 							cont = cont +1;
 							if (cont==17)
 							begin
@@ -228,6 +272,9 @@ module framecontroller
 						end
 					crc21_st:
 						begin
+							CRCcalc_on =0;
+							CRCtime = 1;
+							CRCtype = 3;
 							cont = cont +1;
 							if (cont==21)
 							begin
@@ -235,13 +282,19 @@ module framecontroller
 							end
 						end
 					crcDel_st:
-						if(CAN_RX)
 						begin
-							state <= ack_st;
-						end
-						else
-						begin
-							state <= error_st;
+							CRCtime = 0;
+							CRCtype = 0;
+							BS_onoff = 0;
+							BRS_Stop = 0;
+							if(CAN_RX)
+							begin
+								state <= ack_st;
+							end
+							else
+							begin
+								state <= error_st;
+							end
 						end
 					ack_st:
 						state <= ackDel_st;
@@ -264,7 +317,10 @@ module framecontroller
 							end
 						end
 					ready_st:
-						state <= ready_st;
+						begin
+							frameReady = 1;
+							state <= ready_st;
+						end
 					error_st:
 						begin
 							cont = 0;
@@ -277,7 +333,7 @@ module framecontroller
 
 	// Determine the output based only on the current state
 	// and the input (do not wait for a clock edge).
-	always @ (state)
+	/*always @ (state)
 	begin
 			case (state)
 				arbID_st:
@@ -298,8 +354,8 @@ module framecontroller
 					BS_onoff = 1;
 					CRCcalc_on = 1;
 				end
-				RTR_SRR_st:
-					RTR_SRR = CAN_RX;
+				//RTR_SRR_st:
+					//RTR_SRR = CAN_RX;
 				IDE0_st:
 					IDE = CAN_RX;
 				IDE1_st:
@@ -371,7 +427,7 @@ module framecontroller
 					BRS_Stop = 0;
 					invalidBit = 0;
 					ackValue = 0;
-					RTR_SRR = 0;
+					//RTR_SRR = 0;
 					IDE = 0;
 					EDL = 0;
 					BRS = 0;
@@ -380,6 +436,6 @@ module framecontroller
 					invalidBit = 1;
 				end
 			endcase
-	end
+	end*/
 
 endmodule
