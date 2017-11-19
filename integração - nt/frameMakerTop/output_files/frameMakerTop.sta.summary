@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'samplePoint'
+Slack : -6.860
+TNS   : -253.292
+
+Type  : Slow 1200mV 85C Model Hold 'samplePoint'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'samplePoint'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'samplePoint'
+Slack : -0.098
+TNS   : -4.246
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'samplePoint'
+Slack : -3.000
+TNS   : -116.277
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'interFrameSpace:ifs|isStart0'
+Slack : 0.237
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'samplePoint'
+Slack : -6.336
+TNS   : -233.003
+
+Type  : Slow 1200mV 0C Model Hold 'samplePoint'
+Slack : 0.350
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'samplePoint'
+Slack : 0.309
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'samplePoint'
+Slack : -0.096
+TNS   : -4.154
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'samplePoint'
+Slack : -3.000
+TNS   : -116.277
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'interFrameSpace:ifs|isStart0'
+Slack : 0.155
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'samplePoint'
+Slack : -2.329
+TNS   : -76.494
+
+Type  : Fast 1200mV 0C Model Hold 'samplePoint'
+Slack : -0.125
+TNS   : -0.125
+
+Type  : Fast 1200mV 0C Model Recovery 'samplePoint'
+Slack : 0.316
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'samplePoint'
+Slack : -0.118
+TNS   : -5.191
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'samplePoint'
+Slack : -3.000
+TNS   : -64.654
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'interFrameSpace:ifs|isStart0'
+Slack : 0.463
+TNS   : 0.000
+
+------------------------------------------------------------

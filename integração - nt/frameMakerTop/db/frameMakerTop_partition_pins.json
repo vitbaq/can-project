@@ -1,0 +1,2465 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "endOverload",
+					"strict" : false
+				},
+				{
+					"name" : "BS_onoff",
+					"strict" : false
+				},
+				{
+					"name" : "CRCtype",
+					"strict" : false
+				},
+				{
+					"name" : "BRS_Stop",
+					"strict" : false
+				},
+				{
+					"name" : "CRCcalc_on",
+					"strict" : false
+				},
+				{
+					"name" : "CRCtime",
+					"strict" : false
+				},
+				{
+					"name" : "EDL",
+					"strict" : false
+				},
+				{
+					"name" : "BRS",
+					"strict" : false
+				},
+				{
+					"name" : "frameReady",
+					"strict" : false
+				},
+				{
+					"name" : "isRemote",
+					"strict" : false
+				},
+				{
+					"name" : "size[0]",
+					"strict" : false
+				},
+				{
+					"name" : "size[1]",
+					"strict" : false
+				},
+				{
+					"name" : "size[2]",
+					"strict" : false
+				},
+				{
+					"name" : "size[3]",
+					"strict" : false
+				},
+				{
+					"name" : "size[4]",
+					"strict" : false
+				},
+				{
+					"name" : "size[5]",
+					"strict" : false
+				},
+				{
+					"name" : "size[6]",
+					"strict" : false
+				},
+				{
+					"name" : "size[7]",
+					"strict" : false
+				},
+				{
+					"name" : "size[8]",
+					"strict" : false
+				},
+				{
+					"name" : "size[9]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[0]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[1]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[2]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[3]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[4]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[5]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[6]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[7]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[8]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[9]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[10]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[11]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[12]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[13]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[14]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[15]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[16]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[17]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[18]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[19]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[20]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[21]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[22]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[23]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[24]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[25]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[26]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[27]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[28]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[29]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[30]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[31]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[32]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[33]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[34]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[35]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[36]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[37]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[38]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[39]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[40]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[41]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[42]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[43]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[44]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[45]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[46]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[47]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[48]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[49]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[50]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[51]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[52]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[53]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[54]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[55]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[56]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[57]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[58]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[59]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[60]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[61]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[62]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[63]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[64]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[65]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[66]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[67]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[68]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[69]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[70]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[71]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[72]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[73]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[74]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[75]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[76]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[77]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[78]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[79]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[80]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[81]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[82]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[83]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[84]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[85]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[86]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[87]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[88]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[89]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[90]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[91]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[92]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[93]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[94]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[95]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[96]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[97]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[98]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[99]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[100]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[101]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[102]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[103]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[104]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[105]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[106]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[107]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[108]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[109]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[110]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[111]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[112]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[113]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[114]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[115]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[116]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[117]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[118]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[119]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[120]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[121]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[122]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[123]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[124]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[125]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[126]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[127]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[128]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[129]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[130]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[131]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[132]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[133]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[134]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[135]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[136]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[137]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[138]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[139]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[140]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[141]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[142]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[143]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[144]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[145]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[146]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[147]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[148]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[149]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[150]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[151]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[152]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[153]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[154]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[155]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[156]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[157]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[158]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[159]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[160]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[161]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[162]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[163]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[164]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[165]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[166]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[167]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[168]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[169]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[170]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[171]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[172]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[173]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[174]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[175]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[176]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[177]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[178]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[179]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[180]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[181]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[182]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[183]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[184]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[185]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[186]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[187]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[188]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[189]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[190]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[191]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[192]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[193]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[194]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[195]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[196]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[197]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[198]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[199]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[200]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[201]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[202]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[203]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[204]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[205]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[206]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[207]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[208]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[209]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[210]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[211]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[212]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[213]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[214]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[215]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[216]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[217]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[218]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[219]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[220]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[221]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[222]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[223]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[224]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[225]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[226]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[227]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[228]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[229]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[230]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[231]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[232]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[233]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[234]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[235]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[236]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[237]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[238]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[239]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[240]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[241]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[242]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[243]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[244]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[245]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[246]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[247]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[248]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[249]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[250]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[251]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[252]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[253]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[254]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[255]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[256]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[257]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[258]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[259]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[260]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[261]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[262]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[263]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[264]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[265]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[266]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[267]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[268]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[269]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[270]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[271]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[272]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[273]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[274]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[275]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[276]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[277]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[278]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[279]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[280]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[281]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[282]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[283]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[284]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[285]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[286]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[287]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[288]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[289]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[290]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[291]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[292]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[293]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[294]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[295]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[296]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[297]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[298]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[299]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[300]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[301]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[302]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[303]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[304]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[305]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[306]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[307]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[308]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[309]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[310]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[311]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[312]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[313]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[314]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[315]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[316]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[317]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[318]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[319]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[320]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[321]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[322]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[323]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[324]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[325]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[326]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[327]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[328]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[329]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[330]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[331]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[332]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[333]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[334]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[335]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[336]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[337]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[338]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[339]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[340]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[341]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[342]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[343]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[344]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[345]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[346]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[347]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[348]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[349]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[350]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[351]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[352]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[353]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[354]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[355]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[356]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[357]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[358]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[359]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[360]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[361]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[362]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[363]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[364]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[365]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[366]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[367]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[368]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[369]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[370]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[371]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[372]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[373]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[374]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[375]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[376]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[377]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[378]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[379]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[380]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[381]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[382]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[383]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[384]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[385]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[386]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[387]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[388]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[389]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[390]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[391]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[392]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[393]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[394]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[395]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[396]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[397]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[398]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[399]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[400]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[401]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[402]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[403]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[404]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[405]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[406]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[407]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[408]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[409]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[410]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[411]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[412]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[413]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[414]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[415]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[416]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[417]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[418]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[419]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[420]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[421]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[422]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[423]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[424]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[425]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[426]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[427]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[428]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[429]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[430]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[431]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[432]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[433]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[434]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[435]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[436]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[437]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[438]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[439]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[440]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[441]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[442]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[443]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[444]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[445]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[446]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[447]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[448]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[449]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[450]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[451]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[452]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[453]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[454]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[455]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[456]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[457]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[458]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[459]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[460]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[461]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[462]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[463]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[464]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[465]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[466]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[467]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[468]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[469]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[470]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[471]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[472]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[473]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[474]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[475]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[476]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[477]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[478]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[479]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[480]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[481]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[482]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[483]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[484]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[485]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[486]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[487]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[488]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[489]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[490]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[491]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[492]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[493]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[494]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[495]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[496]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[497]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[498]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[499]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[500]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[501]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[502]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[503]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[504]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[505]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[506]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[507]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[508]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[509]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[510]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[511]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[512]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[513]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[514]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[515]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[516]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[517]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[518]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[519]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[520]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[521]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[522]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[523]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[524]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[525]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[526]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[527]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[528]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[529]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[530]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[531]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[532]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[533]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[534]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[535]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[536]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[537]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[538]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[539]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[540]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[541]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[542]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[543]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[544]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[545]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[546]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[547]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[548]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[549]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[550]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[551]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[552]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[553]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[554]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[555]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[556]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[557]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[558]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[559]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[560]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[561]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[562]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[563]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[564]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[565]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[566]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[567]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[568]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[569]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[570]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[571]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[572]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[573]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[574]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[575]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[576]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[577]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[578]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[579]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[580]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[581]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[582]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[583]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[584]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[585]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[586]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[587]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[588]",
+					"strict" : false
+				},
+				{
+					"name" : "frame[589]",
+					"strict" : false
+				},
+				{
+					"name" : "isError",
+					"strict" : false
+				},
+				{
+					"name" : "canRX",
+					"strict" : false
+				},
+				{
+					"name" : "samplePoint",
+					"strict" : false
+				},
+				{
+					"name" : "isStuff",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
