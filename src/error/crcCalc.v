@@ -32,11 +32,4 @@ always @ (posedge samplePoint or posedge reset) begin
                     end
 
 
-    else if (~isStuff)
-        begin
-
-        end
-
-    end
-
 endmodule
