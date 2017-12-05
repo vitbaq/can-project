@@ -2,7 +2,7 @@ module frameStorage
 (
 	input	sp, CAN_RX, isStuff, reset,
 	//output reg [589:0] frame
-	output reg [589:0] frame
+	output reg [150:0] frame
 );
 
 	
@@ -12,10 +12,12 @@ module frameStorage
 
 	// Determine the next state synchronously, based on the
 	// current state and the input
-	always @ (posedge sp or posedge reset) begin
+	always @ (posedge sp) begin
 		if (reset)
 			begin
 				frame = 0;
+				frame = frame << 1;
+				frame = frame + CAN_RX;
 			end
 		else if (~isStuff)
 			begin

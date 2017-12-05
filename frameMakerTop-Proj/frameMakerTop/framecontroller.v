@@ -317,6 +317,7 @@ module framecontroller
 						cont = cont +1;
 						if(cont==7)
 						begin
+							frameReady = 1;
 							state <= ready_st;
 						end
 					end

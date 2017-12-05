@@ -7,6 +7,7 @@ module interFrameSpace (samplePoint, canRX, frameReady, endOverload, isOverload,
 	
 	reg [2:0]state = bus_idle;
 	reg isOverload0 = 0, isStart0 = 0; 
+	reg counter = 0;
 	
 	assign isOverload = isOverload0;
 	assign isStart = isStart0;
@@ -40,7 +41,7 @@ module interFrameSpace (samplePoint, canRX, frameReady, endOverload, isOverload,
 		end
 
 		if (frameReady == 1 && endOverload == 0) begin
-		
+			counter = counter+1;
 			case (state)
 				bit1_intermission:
 					if (canRX == 1) begin

@@ -12,10 +12,10 @@ module frameSize
 	
 	// Determine the next state synchronously, based on the
 	// current state and the input
-	always @ (posedge sp or posedge reset) begin
+	always @ (posedge sp) begin
 		if (reset)
 			begin
-				size <= 10'b0;
+				size <= 10'b1;
 			end
 		else if (~isStuff)
 			begin
