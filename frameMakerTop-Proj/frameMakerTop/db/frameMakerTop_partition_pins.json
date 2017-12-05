@@ -1,0 +1,81 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "endOverload",
+					"strict" : false
+				},
+				{
+					"name" : "isStart",
+					"strict" : false
+				},
+				{
+					"name" : "frameReadyFromFramecontroller",
+					"strict" : false
+				},
+				{
+					"name" : "BS_onoff",
+					"strict" : false
+				},
+				{
+					"name" : "CRCtype[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CRCtype[1]",
+					"strict" : false
+				},
+				{
+					"name" : "BRS_Stop",
+					"strict" : false
+				},
+				{
+					"name" : "CRCcalc_on",
+					"strict" : false
+				},
+				{
+					"name" : "CRCtime",
+					"strict" : false
+				},
+				{
+					"name" : "RTR_SRR",
+					"strict" : false
+				},
+				{
+					"name" : "IDE",
+					"strict" : false
+				},
+				{
+					"name" : "EDL",
+					"strict" : false
+				},
+				{
+					"name" : "BRS",
+					"strict" : false
+				},
+				{
+					"name" : "RTR_r1",
+					"strict" : false
+				},
+				{
+					"name" : "isError",
+					"strict" : false
+				},
+				{
+					"name" : "canRX",
+					"strict" : false
+				},
+				{
+					"name" : "samplePoint",
+					"strict" : false
+				},
+				{
+					"name" : "isStuff",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

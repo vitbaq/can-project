@@ -1,0 +1,38 @@
+
+State Machine - |frameMakerTop|framecontroller:fc|state
+Name state.error_st state.ready_st state.eof_st state.ackDel_st state.ack_st state.crcDel_st state.crc21_st state.crc17_st state.crc15_st state.data_st state.DLC_st state.ESI_st state.BRS_st state.r0_FD_st state.r1_EDL_st state.extRTR_st state.extID_st state.r0_EDL_st state.IDE1_st state.IDE0_st state.RTR_SRR_st state.arbID_st 
+state.arbID_st 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.RTR_SRR_st 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.IDE0_st 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.IDE1_st 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.r0_EDL_st 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.extID_st 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.extRTR_st 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.r1_EDL_st 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.r0_FD_st 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.BRS_st 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ESI_st 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.DLC_st 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.data_st 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.crc15_st 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.crc17_st 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.crc21_st 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.crcDel_st 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ack_st 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ackDel_st 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.eof_st 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ready_st 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.error_st 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |frameMakerTop|overload:ov|state
+Name state.overload_flag state.overload_delimiter state.overload_superposition 
+state.overload_flag 0 0 0 
+state.overload_superposition 1 0 1 
+state.overload_delimiter 1 1 0 
+
+State Machine - |frameMakerTop|interFrameSpace:ifs|state
+Name state.bus_idle state.bit3_intermission state.bit2_intermission state.bit1_intermission 
+state.bit1_intermission 0 0 0 0 
+state.bit2_intermission 0 0 1 1 
+state.bit3_intermission 0 1 0 1 
+state.bus_idle 1 0 0 1 
