@@ -1,5 +1,5 @@
 Analysis & Synthesis report for frameMakerTop
-Tue Dec 05 17:26:54 2017
+Wed Dec 06 01:55:13 2017
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -52,16 +52,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 05 17:26:54 2017       ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 06 01:55:13 2017       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; frameMakerTop                               ;
 ; Top-level Entity Name              ; frameMakerTop                               ;
 ; Family                             ; Cyclone IV GX                               ;
-; Total logic elements               ; 339                                         ;
-;     Total combinational functions  ; 335                                         ;
-;     Dedicated logic registers      ; 223                                         ;
-; Total registers                    ; 223                                         ;
-; Total pins                         ; 180                                         ;
+; Total logic elements               ; 338                                         ;
+;     Total combinational functions  ; 337                                         ;
+;     Dedicated logic registers      ; 224                                         ;
+; Total registers                    ; 224                                         ;
+; Total pins                         ; 181                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -181,6 +181,7 @@ agreement for further details.
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                           ; Library ;
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
+; datarate.v                       ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/17.0/frameMakerTop/datarate.v        ;         ;
 ; frameStorage.v                   ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/17.0/frameMakerTop/frameStorage.v    ;         ;
 ; frameSize.v                      ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/17.0/frameMakerTop/frameSize.v       ;         ;
 ; DatavsRemote.v                   ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/17.0/frameMakerTop/DatavsRemote.v    ;         ;
@@ -191,20 +192,20 @@ agreement for further details.
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
 
 
-+----------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary  ;
-+--------------------------+-------------------+
-; Resource                 ; Usage             ;
-+--------------------------+-------------------+
-; I/O pins                 ; 180               ;
-;                          ;                   ;
-; DSP block 9-bit elements ; 0                 ;
-;                          ;                   ;
-; Maximum fan-out node     ; samplePoint~input ;
-; Maximum fan-out          ; 223               ;
-; Total fan-out            ; 1973              ;
-; Average fan-out          ; 2.15              ;
-+--------------------------+-------------------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++--------------------------+----------------------------+
+; Resource                 ; Usage                      ;
++--------------------------+----------------------------+
+; I/O pins                 ; 181                        ;
+;                          ;                            ;
+; DSP block 9-bit elements ; 0                          ;
+;                          ;                            ;
+; Maximum fan-out node     ; datarate:dt|samplePointOUT ;
+; Maximum fan-out          ; 224                        ;
+; Total fan-out            ; 1973                       ;
+; Average fan-out          ; 2.14                       ;
++--------------------------+----------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -212,12 +213,13 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name     ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------+-----------------+--------------+
-; |frameMakerTop             ; 335 (1)             ; 223 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0         ; 180  ; 0            ; |frameMakerTop                     ; frameMakerTop   ; work         ;
+; |frameMakerTop             ; 337 (1)             ; 224 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0         ; 181  ; 0            ; |frameMakerTop                     ; frameMakerTop   ; work         ;
 ;    |DatavsRemote:dr|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |frameMakerTop|DatavsRemote:dr     ; DatavsRemote    ; work         ;
+;    |datarate:dt|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |frameMakerTop|datarate:dt         ; datarate        ; work         ;
 ;    |frameSize:fsz|         ; 10 (10)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |frameMakerTop|frameSize:fsz       ; frameSize       ; work         ;
 ;    |frameStorage:fst|      ; 151 (151)           ; 151 (151)                 ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |frameMakerTop|frameStorage:fst    ; frameStorage    ; work         ;
-;    |framecontroller:fc|    ; 130 (130)           ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |frameMakerTop|framecontroller:fc  ; framecontroller ; work         ;
-;    |interFrameSpace:ifs|   ; 7 (7)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |frameMakerTop|interFrameSpace:ifs ; interFrameSpace ; work         ;
+;    |framecontroller:fc|    ; 128 (128)           ; 46 (46)                   ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |frameMakerTop|framecontroller:fc  ; framecontroller ; work         ;
+;    |interFrameSpace:ifs|   ; 9 (9)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |frameMakerTop|interFrameSpace:ifs ; interFrameSpace ; work         ;
 ;    |overload:ov|           ; 35 (35)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |frameMakerTop|overload:ov         ; overload        ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -304,12 +306,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 223   ;
-; Number of registers using Synchronous Clear  ; 31    ;
-; Number of registers using Synchronous Load   ; 14    ;
+; Total registers                              ; 224   ;
+; Number of registers using Synchronous Clear  ; 28    ;
+; Number of registers using Synchronous Load   ; 13    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 203   ;
+; Number of registers using Clock Enable       ; 204   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -319,7 +321,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; 3:1                ; 168 bits  ; 336 LEs       ; 168 LEs              ; 168 LEs                ; Yes        ; |frameMakerTop|frameStorage:fst|frame[6]  ;
+; 3:1                ; 168 bits  ; 336 LEs       ; 168 LEs              ; 168 LEs                ; Yes        ; |frameMakerTop|frameStorage:fst|frame[5]  ;
 ; 9:1                ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |frameMakerTop|overload:ov|count[4]       ;
 ; 19:1               ; 8 bits    ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; Yes        ; |frameMakerTop|framecontroller:fc|cont[0] ;
 ; 14:1               ; 3 bits    ; 27 LEs        ; 12 LEs               ; 15 LEs                 ; No         ; |frameMakerTop|overload:ov|state          ;
@@ -390,26 +392,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 180                         ;
-; cycloneiii_ff         ; 223                         ;
-;     ENA               ; 168                         ;
-;     ENA SCLR          ; 25                          ;
+; boundary_port         ; 181                         ;
+; cycloneiii_ff         ; 224                         ;
+;     ENA               ; 172                         ;
+;     ENA SCLR          ; 22                          ;
 ;     ENA SLD           ; 10                          ;
 ;     SCLR              ; 6                           ;
-;     SLD               ; 4                           ;
-;     plain             ; 10                          ;
-; cycloneiii_lcell_comb ; 335                         ;
+;     SLD               ; 3                           ;
+;     plain             ; 11                          ;
+; cycloneiii_lcell_comb ; 337                         ;
 ;     arith             ; 16                          ;
 ;         2 data inputs ; 16                          ;
-;     normal            ; 319                         ;
+;     normal            ; 321                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 174                         ;
-;         3 data inputs ; 36                          ;
-;         4 data inputs ; 106                         ;
+;         3 data inputs ; 43                          ;
+;         4 data inputs ; 101                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.50                        ;
-; Average LUT depth     ; 2.31                        ;
+; Average LUT depth     ; 2.30                        ;
 +-----------------------+-----------------------------+
 
 
@@ -418,7 +420,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -428,10 +430,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Dec 05 17:26:44 2017
+    Info: Processing started: Wed Dec 06 01:55:03 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off frameMakerTop -c frameMakerTop
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file datarate.v
+    Info (12023): Found entity 1: datarate File: C:/intelFPGA_lite/17.0/frameMakerTop/datarate.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file framestorage.v
     Info (12023): Found entity 1: frameStorage File: C:/intelFPGA_lite/17.0/frameMakerTop/frameStorage.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file framesize.v
@@ -447,37 +451,46 @@ Info (12021): Found 1 design units, including 1 entities, in source file overloa
 Info (12021): Found 1 design units, including 1 entities, in source file interframespace.v
     Info (12023): Found entity 1: interFrameSpace File: C:/intelFPGA_lite/17.0/frameMakerTop/interFrameSpace.v Line: 1
 Info (12127): Elaborating entity "frameMakerTop" for the top level hierarchy
-Info (12128): Elaborating entity "interFrameSpace" for hierarchy "interFrameSpace:ifs" File: C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v Line: 11
-Warning (10230): Verilog HDL assignment warning at interFrameSpace.v(44): truncated value with size 32 to match size of target (1) File: C:/intelFPGA_lite/17.0/frameMakerTop/interFrameSpace.v Line: 44
-Info (12128): Elaborating entity "overload" for hierarchy "overload:ov" File: C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v Line: 12
+Info (12128): Elaborating entity "datarate" for hierarchy "datarate:dt" File: C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v Line: 11
+Warning (10235): Verilog HDL Always Construct warning at datarate.v(13): variable "init" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.0/frameMakerTop/datarate.v Line: 13
+Warning (10235): Verilog HDL Always Construct warning at datarate.v(17): variable "edl" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.0/frameMakerTop/datarate.v Line: 17
+Warning (10235): Verilog HDL Always Construct warning at datarate.v(17): variable "brs" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.0/frameMakerTop/datarate.v Line: 17
+Warning (10235): Verilog HDL Always Construct warning at datarate.v(17): variable "brsStop" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.0/frameMakerTop/datarate.v Line: 17
+Warning (10235): Verilog HDL Always Construct warning at datarate.v(18): variable "edl" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.0/frameMakerTop/datarate.v Line: 18
+Warning (10235): Verilog HDL Always Construct warning at datarate.v(18): variable "brs" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.0/frameMakerTop/datarate.v Line: 18
+Warning (10235): Verilog HDL Always Construct warning at datarate.v(18): variable "brsStop" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/intelFPGA_lite/17.0/frameMakerTop/datarate.v Line: 18
+Warning (10240): Verilog HDL Always Construct warning at datarate.v(11): inferring latch(es) for variable "init", which holds its previous value in one or more paths through the always construct File: C:/intelFPGA_lite/17.0/frameMakerTop/datarate.v Line: 11
+Info (10041): Inferred latch for "init" at datarate.v(11) File: C:/intelFPGA_lite/17.0/frameMakerTop/datarate.v Line: 11
+Info (12128): Elaborating entity "interFrameSpace" for hierarchy "interFrameSpace:ifs" File: C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v Line: 12
+Info (12128): Elaborating entity "overload" for hierarchy "overload:ov" File: C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v Line: 13
 Warning (10230): Verilog HDL assignment warning at overload.v(30): truncated value with size 32 to match size of target (5) File: C:/intelFPGA_lite/17.0/frameMakerTop/overload.v Line: 30
 Warning (10230): Verilog HDL assignment warning at overload.v(33): truncated value with size 32 to match size of target (5) File: C:/intelFPGA_lite/17.0/frameMakerTop/overload.v Line: 33
 Warning (10230): Verilog HDL assignment warning at overload.v(44): truncated value with size 32 to match size of target (5) File: C:/intelFPGA_lite/17.0/frameMakerTop/overload.v Line: 44
 Warning (10230): Verilog HDL assignment warning at overload.v(47): truncated value with size 32 to match size of target (5) File: C:/intelFPGA_lite/17.0/frameMakerTop/overload.v Line: 47
 Warning (10230): Verilog HDL assignment warning at overload.v(58): truncated value with size 32 to match size of target (5) File: C:/intelFPGA_lite/17.0/frameMakerTop/overload.v Line: 58
 Warning (10230): Verilog HDL assignment warning at overload.v(71): truncated value with size 32 to match size of target (5) File: C:/intelFPGA_lite/17.0/frameMakerTop/overload.v Line: 71
-Info (12128): Elaborating entity "framecontroller" for hierarchy "framecontroller:fc" File: C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v Line: 13
+Info (12128): Elaborating entity "framecontroller" for hierarchy "framecontroller:fc" File: C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v Line: 14
 Warning (10036): Verilog HDL or VHDL warning at framecontroller.v(35): object "bitlido" assigned a value but never read File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 35
-Warning (10036): Verilog HDL or VHDL warning at framecontroller.v(36): object "iddd" assigned a value but never read File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 36
-Warning (10230): Verilog HDL assignment warning at framecontroller.v(44): truncated value with size 32 to match size of target (3) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 44
-Warning (10230): Verilog HDL assignment warning at framecontroller.v(78): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 78
-Warning (10230): Verilog HDL assignment warning at framecontroller.v(125): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 125
-Warning (10230): Verilog HDL assignment warning at framecontroller.v(186): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 186
-Warning (10230): Verilog HDL assignment warning at framecontroller.v(197): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 197
-Warning (10230): Verilog HDL assignment warning at framecontroller.v(199): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 199
-Warning (10230): Verilog HDL assignment warning at framecontroller.v(201): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 201
-Warning (10230): Verilog HDL assignment warning at framecontroller.v(203): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 203
-Warning (10230): Verilog HDL assignment warning at framecontroller.v(205): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 205
-Warning (10230): Verilog HDL assignment warning at framecontroller.v(207): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 207
-Warning (10230): Verilog HDL assignment warning at framecontroller.v(235): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 235
-Warning (10230): Verilog HDL assignment warning at framecontroller.v(260): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 260
-Warning (10230): Verilog HDL assignment warning at framecontroller.v(271): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 271
-Warning (10230): Verilog HDL assignment warning at framecontroller.v(282): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 282
-Warning (10230): Verilog HDL assignment warning at framecontroller.v(317): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 317
-Info (12128): Elaborating entity "DatavsRemote" for hierarchy "DatavsRemote:dr" File: C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v Line: 14
-Info (12128): Elaborating entity "frameSize" for hierarchy "frameSize:fsz" File: C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v Line: 15
+Warning (10230): Verilog HDL assignment warning at framecontroller.v(73): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 73
+Warning (10230): Verilog HDL assignment warning at framecontroller.v(120): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 120
+Warning (10230): Verilog HDL assignment warning at framecontroller.v(181): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 181
+Warning (10230): Verilog HDL assignment warning at framecontroller.v(192): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 192
+Warning (10230): Verilog HDL assignment warning at framecontroller.v(194): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 194
+Warning (10230): Verilog HDL assignment warning at framecontroller.v(196): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 196
+Warning (10230): Verilog HDL assignment warning at framecontroller.v(198): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 198
+Warning (10230): Verilog HDL assignment warning at framecontroller.v(200): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 200
+Warning (10230): Verilog HDL assignment warning at framecontroller.v(202): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 202
+Warning (10230): Verilog HDL assignment warning at framecontroller.v(230): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 230
+Warning (10230): Verilog HDL assignment warning at framecontroller.v(255): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 255
+Warning (10230): Verilog HDL assignment warning at framecontroller.v(266): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 266
+Warning (10230): Verilog HDL assignment warning at framecontroller.v(277): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 277
+Warning (10230): Verilog HDL assignment warning at framecontroller.v(312): truncated value with size 32 to match size of target (8) File: C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v Line: 312
+Info (12128): Elaborating entity "DatavsRemote" for hierarchy "DatavsRemote:dr" File: C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v Line: 15
+Info (12128): Elaborating entity "frameSize" for hierarchy "frameSize:fsz" File: C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v Line: 16
 Warning (10230): Verilog HDL assignment warning at frameSize.v(22): truncated value with size 32 to match size of target (10) File: C:/intelFPGA_lite/17.0/frameMakerTop/frameSize.v Line: 22
-Info (12128): Elaborating entity "frameStorage" for hierarchy "frameStorage:fst" File: C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v Line: 16
+Info (12128): Elaborating entity "frameStorage" for hierarchy "frameStorage:fst" File: C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v Line: 17
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer datarate:dt|samplePointOUT File: C:/intelFPGA_lite/17.0/frameMakerTop/datarate.v Line: 4
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "invalidBit" is stuck at GND File: C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v Line: 4
     Warning (13410): Pin "ackValue" is stuck at GND File: C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v Line: 4
@@ -487,14 +500,14 @@ Info (144001): Generated suppressed messages file C:/intelFPGA_lite/17.0/frameMa
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 522 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
+    Info (21058): Implemented 5 input pins
     Info (21059): Implemented 176 output pins
-    Info (21061): Implemented 342 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 764 megabytes
-    Info: Processing ended: Tue Dec 05 17:26:54 2017
+    Info (21061): Implemented 341 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 762 megabytes
+    Info: Processing ended: Wed Dec 06 01:55:13 2017
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+

@@ -6,8 +6,8 @@ module interFrameSpace (samplePoint, canRX, frameReady, endOverload, isOverload,
 	parameter bit1_intermission = 0, bit2_intermission = 1, bit3_intermission = 2, bus_idle = 3;
 	
 	reg [2:0]state = bus_idle;
-	reg isOverload0 = 0, isStart0 = 0; 
-	reg counter = 0;
+	reg isOverload0 = 0, isStart0 = 0;
+	reg endError = 0;
 	
 	assign isOverload = isOverload0;
 	assign isStart = isStart0;
@@ -19,6 +19,8 @@ module interFrameSpace (samplePoint, canRX, frameReady, endOverload, isOverload,
 			state <= bit1_intermission;
 			isOverload0 <= 0;
 			isStart0 <= 0;
+			if (endOverload)
+				endError <= 1;
 		
 		end
 		
@@ -40,8 +42,7 @@ module interFrameSpace (samplePoint, canRX, frameReady, endOverload, isOverload,
 			
 		end
 
-		if (frameReady == 1 && endOverload == 0) begin
-			counter = counter+1;
+		if ((frameReady == 1 && endOverload == 0) || endError == 1) begin
 			case (state)
 				bit1_intermission:
 					if (canRX == 1) begin
@@ -52,6 +53,7 @@ module interFrameSpace (samplePoint, canRX, frameReady, endOverload, isOverload,
 						state <= bit1_intermission;
 						isOverload0 <= 1;
 						isStart0 <= 0;
+						endError <= 0;
 					end
 					
 				bit2_intermission:
@@ -63,6 +65,7 @@ module interFrameSpace (samplePoint, canRX, frameReady, endOverload, isOverload,
 						state <= bit1_intermission;
 						isOverload0 <= 1;
 						isStart0 <= 0;
+						endError <= 0;
 					end
 					
 				bit3_intermission:
@@ -74,6 +77,7 @@ module interFrameSpace (samplePoint, canRX, frameReady, endOverload, isOverload,
 						state <= bit1_intermission;
 						isOverload0 <= 0;
 						isStart0 <= 1;
+						endError <= 0;
 					end
 					
 				bus_idle:
@@ -85,6 +89,7 @@ module interFrameSpace (samplePoint, canRX, frameReady, endOverload, isOverload,
 						state <= bit1_intermission;
 						isOverload0 <= 0;
 						isStart0 <= 1;
+						endError <= 0;
 					end
 			endcase
 		end

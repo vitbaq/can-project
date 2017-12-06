@@ -1,4 +1,5 @@
 # Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
 # do frameMakerTop_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -10,93 +11,104 @@
 # Copying C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/frameMakerTop {C:/intelFPGA_lite/17.0/frameMakerTop/datarate.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:16:44 on Dec 06,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/frameMakerTop" C:/intelFPGA_lite/17.0/frameMakerTop/datarate.v 
+# -- Compiling module datarate
+# 
+# Top level modules:
+# 	datarate
+# End time: 02:16:44 on Dec 06,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/frameMakerTop {C:/intelFPGA_lite/17.0/frameMakerTop/frameStorage.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:27:56 on Dec 05,2017
+# Start time: 02:16:44 on Dec 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/frameMakerTop" C:/intelFPGA_lite/17.0/frameMakerTop/frameStorage.v 
 # -- Compiling module frameStorage
 # 
 # Top level modules:
 # 	frameStorage
-# End time: 17:27:56 on Dec 05,2017, Elapsed time: 0:00:00
+# End time: 02:16:45 on Dec 06,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/frameMakerTop {C:/intelFPGA_lite/17.0/frameMakerTop/frameSize.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:27:56 on Dec 05,2017
+# Start time: 02:16:45 on Dec 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/frameMakerTop" C:/intelFPGA_lite/17.0/frameMakerTop/frameSize.v 
 # -- Compiling module frameSize
 # 
 # Top level modules:
 # 	frameSize
-# End time: 17:27:56 on Dec 05,2017, Elapsed time: 0:00:00
+# End time: 02:16:45 on Dec 06,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/frameMakerTop {C:/intelFPGA_lite/17.0/frameMakerTop/DatavsRemote.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:27:56 on Dec 05,2017
+# Start time: 02:16:45 on Dec 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/frameMakerTop" C:/intelFPGA_lite/17.0/frameMakerTop/DatavsRemote.v 
 # -- Compiling module DatavsRemote
 # 
 # Top level modules:
 # 	DatavsRemote
-# End time: 17:27:56 on Dec 05,2017, Elapsed time: 0:00:00
+# End time: 02:16:45 on Dec 06,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/frameMakerTop {C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:27:56 on Dec 05,2017
+# Start time: 02:16:45 on Dec 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/frameMakerTop" C:/intelFPGA_lite/17.0/frameMakerTop/framecontroller.v 
 # -- Compiling module framecontroller
 # 
 # Top level modules:
 # 	framecontroller
-# End time: 17:27:56 on Dec 05,2017, Elapsed time: 0:00:00
+# End time: 02:16:45 on Dec 06,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/frameMakerTop {C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:27:56 on Dec 05,2017
+# Start time: 02:16:45 on Dec 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/frameMakerTop" C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop.v 
 # -- Compiling module frameMakerTop
 # 
 # Top level modules:
 # 	frameMakerTop
-# End time: 17:27:56 on Dec 05,2017, Elapsed time: 0:00:00
+# End time: 02:16:45 on Dec 06,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/frameMakerTop {C:/intelFPGA_lite/17.0/frameMakerTop/overload.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:27:56 on Dec 05,2017
+# Start time: 02:16:45 on Dec 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/frameMakerTop" C:/intelFPGA_lite/17.0/frameMakerTop/overload.v 
 # -- Compiling module overload
 # 
 # Top level modules:
 # 	overload
-# End time: 17:27:56 on Dec 05,2017, Elapsed time: 0:00:00
+# End time: 02:16:45 on Dec 06,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/frameMakerTop {C:/intelFPGA_lite/17.0/frameMakerTop/interFrameSpace.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:27:56 on Dec 05,2017
+# Start time: 02:16:45 on Dec 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/frameMakerTop" C:/intelFPGA_lite/17.0/frameMakerTop/interFrameSpace.v 
 # -- Compiling module interFrameSpace
 # 
 # Top level modules:
 # 	interFrameSpace
-# End time: 17:27:56 on Dec 05,2017, Elapsed time: 0:00:00
+# End time: 02:16:45 on Dec 06,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/frameMakerTop {C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop_TB.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:27:56 on Dec 05,2017
+# Start time: 02:16:45 on Dec 06,2017
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/intelFPGA_lite/17.0/frameMakerTop" C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop_TB.v 
 # -- Compiling module frameMakerTop_TB
 # 
 # Top level modules:
 # 	frameMakerTop_TB
-# End time: 17:27:57 on Dec 05,2017, Elapsed time: 0:00:01
+# End time: 02:16:45 on Dec 06,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  frameMakerTop_TB
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=""+acc"" frameMakerTop_TB 
-# Start time: 17:27:57 on Dec 05,2017
+# Start time: 02:16:45 on Dec 06,2017
 # Loading work.frameMakerTop_TB
 # Loading work.frameMakerTop
+# Loading work.datarate
 # Loading work.interFrameSpace
 # Loading work.overload
 # Loading work.framecontroller
@@ -105,19 +117,22 @@
 # Loading work.frameStorage
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Vítor  Hostname: VÍTOR-PC  ProcessID: 7224
+#           Attempting to use alternate WLF file "./wlftcj3y5k".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftcj3y5k
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $stop    : C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop_TB.v(21)
+# ** Note: $stop    : C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop_TB.v(19)
 #    Time: 0 ps  Iteration: 0  Instance: /frameMakerTop_TB
-# Break in Module frameMakerTop_TB at C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop_TB.v line 21
-add wave -position insertpoint sim:/frameMakerTop_TB/dut/fc/cont
-add wave -position insertpoint sim:/frameMakerTop_TB/dut/fc/frameReady
+# Break in Module frameMakerTop_TB at C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop_TB.v line 19
 run -continue
-# ** Note: $stop    : C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop_TB.v(48)
-#    Time: 1330 ps  Iteration: 1  Instance: /frameMakerTop_TB
-# Break in Module frameMakerTop_TB at C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop_TB.v line 48
-# End time: 17:29:41 on Dec 05,2017, Elapsed time: 0:01:44
-# Errors: 0, Warnings: 0
+# ** Note: $stop    : C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop_TB.v(56)
+#    Time: 1499 ps  Iteration: 1  Instance: /frameMakerTop_TB
+# Break in Module frameMakerTop_TB at C:/intelFPGA_lite/17.0/frameMakerTop/frameMakerTop_TB.v line 56
+# End time: 02:20:32 on Dec 06,2017, Elapsed time: 0:03:47
+# Errors: 0, Warnings: 2

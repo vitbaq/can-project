@@ -33,15 +33,11 @@ module framecontroller
 	reg		[3:0]dlc;
 	reg		FD;
 	reg		bitlido;
-	reg		iddd;
-	reg		[2:0]contador = 0;
-
 
 	// Determine the next state synchronously, based on the
 	// current state and the input
-	always @ (posedge sp ) begin
+	always @ (posedge sp) begin
 		if (reset) begin
-			contador = contador + 1;
 			state <= arbID_st;
 			cont = 1;
 			dlc = 0;
@@ -74,7 +70,6 @@ module framecontroller
 					begin
 						if(cont < 10)
 						begin
-							iddd = CAN_RX;
 							cont = cont +1;
 						end
 						else

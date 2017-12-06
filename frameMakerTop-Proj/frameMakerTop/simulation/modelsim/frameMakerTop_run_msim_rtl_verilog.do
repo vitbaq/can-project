@@ -5,6 +5,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/frameMakerTop {C:/intelFPGA_lite/17.0/frameMakerTop/datarate.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/frameMakerTop {C:/intelFPGA_lite/17.0/frameMakerTop/frameStorage.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/frameMakerTop {C:/intelFPGA_lite/17.0/frameMakerTop/frameSize.v}
 vlog -vlog01compat -work work +incdir+C:/intelFPGA_lite/17.0/frameMakerTop {C:/intelFPGA_lite/17.0/frameMakerTop/DatavsRemote.v}

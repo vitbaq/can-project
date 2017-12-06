@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue Dec 05 17:27:20 2017
+Fitter Status : Successful - Wed Dec 06 01:55:38 2017
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : frameMakerTop
 Top-level Entity Name : frameMakerTop
 Family : Cyclone IV GX
 Device : EP4CGX150DF31C8
 Timing Models : Final
-Total logic elements : 337 / 149,760 ( < 1 % )
-    Total combinational functions : 335 / 149,760 ( < 1 % )
-    Dedicated logic registers : 223 / 149,760 ( < 1 % )
-Total registers : 223
-Total pins : 180 / 508 ( 35 % )
+Total logic elements : 338 / 149,760 ( < 1 % )
+    Total combinational functions : 337 / 149,760 ( < 1 % )
+    Dedicated logic registers : 224 / 149,760 ( < 1 % )
+Total registers : 224
+Total pins : 181 / 508 ( 36 % )
 Total virtual pins : 0
 Total memory bits : 0 / 6,635,520 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 720 ( 0 % )

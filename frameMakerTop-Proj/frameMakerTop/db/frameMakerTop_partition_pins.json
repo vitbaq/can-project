@@ -32,10 +32,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "RTR_SRR",
-					"strict" : false
-				},
-				{
 					"name" : "IDE",
 					"strict" : false
 				},
@@ -45,10 +41,6 @@
 				},
 				{
 					"name" : "BRS",
-					"strict" : false
-				},
-				{
-					"name" : "RTR_r1",
 					"strict" : false
 				},
 				{
@@ -700,6 +692,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "frameReady",
+					"strict" : false
+				},
+				{
+					"name" : "isStart",
+					"strict" : false
+				},
+				{
 					"name" : "isError",
 					"strict" : false
 				},
@@ -708,11 +708,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "samplePoint",
+					"name" : "isStuff",
 					"strict" : false
 				},
 				{
-					"name" : "isStuff",
+					"name" : "samplePointFD",
+					"strict" : false
+				},
+				{
+					"name" : "samplePoint",
 					"strict" : false
 				}
 			]

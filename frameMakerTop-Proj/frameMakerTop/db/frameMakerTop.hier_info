@@ -1,5 +1,6 @@
 |frameMakerTop
-samplePoint => samplePoint.IN5
+samplePoint => samplePoint.IN1
+samplePointFD => samplePointFD.IN1
 canRX => canRX.IN4
 isError => isError.IN2
 isStuff => isStuff.IN3
@@ -7,16 +8,14 @@ endOverload << endOverload.DB_MAX_OUTPUT_PORT_TYPE
 BS_onoff << framecontroller:fc.port5
 CRCtype[0] << framecontroller:fc.port6
 CRCtype[1] << framecontroller:fc.port6
-BRS_Stop << framecontroller:fc.port7
+BRS_Stop << BRS_Stop.DB_MAX_OUTPUT_PORT_TYPE
 invalidBit << framecontroller:fc.port8
 CRCcalc_on << framecontroller:fc.port9
 CRCtime << framecontroller:fc.port10
 ackValue << framecontroller:fc.port11
-RTR_SRR << RTR_SRR.DB_MAX_OUTPUT_PORT_TYPE
 IDE << IDE.DB_MAX_OUTPUT_PORT_TYPE
-EDL << framecontroller:fc.port14
-BRS << framecontroller:fc.port15
-RTR_r1 << RTR_r1.DB_MAX_OUTPUT_PORT_TYPE
+EDL << EDL.DB_MAX_OUTPUT_PORT_TYPE
+BRS << BRS.DB_MAX_OUTPUT_PORT_TYPE
 isRemote << DatavsRemote:dr.port3
 size[0] << frameSize:fsz.port3
 size[1] << frameSize:fsz.port3
@@ -179,12 +178,25 @@ frame[147] << frameStorage:fst.port4
 frame[148] << frameStorage:fst.port4
 frame[149] << frameStorage:fst.port4
 frame[150] << frameStorage:fst.port4
+frameReady << frameReady.DB_MAX_OUTPUT_PORT_TYPE
+isStart << isStart.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|frameMakerTop|datarate:dt
+samplePoint => samplePointOUT.DATAB
+samplePointFD => samplePointOUT.DATAA
+edl => switch.IN0
+brs => switch.IN1
+brsStop => switch.IN1
+samplePointOUT <= samplePointOUT.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |frameMakerTop|interFrameSpace:ifs
+samplePoint => endError.CLK
 samplePoint => isStart0.CLK
 samplePoint => isOverload0.CLK
 samplePoint => state~5.DATAIN
+canRX => endError.OUTPUTSELECT
 canRX => state.DATAB
 canRX => state.DATAB
 canRX => state.DATAB
@@ -202,6 +214,8 @@ frameReady => state.OUTPUTSELECT
 frameReady => state.OUTPUTSELECT
 frameReady => isOverload0.OUTPUTSELECT
 frameReady => isStart0.OUTPUTSELECT
+frameReady => endError.OUTPUTSELECT
+endOverload => endError.OUTPUTSELECT
 endOverload => always0.IN1
 endOverload => always0.IN1
 isOverload <= isOverload0.DB_MAX_OUTPUT_PORT_TYPE
